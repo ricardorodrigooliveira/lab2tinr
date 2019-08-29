@@ -1,4 +1,4 @@
-var app = require('./index')
+var app = require('../index')
 
 var http = require('http'),
     assert = require('assert'),
