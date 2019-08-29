@@ -91,6 +91,9 @@ node_js:
 # Teste
 Facha o push para o git
 
+Acesse o sitehttps://travis-ci.org e faça login com o usuário do git  
+O travis já irá exibir os repositórios do git e basta ligar a chave para os repositórios que deseje testar.
+
 
 ### Notas gerais
 * build Scripts
@@ -100,8 +103,8 @@ Facha o push para o git
 
 # github
 
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/ricardorodrigooliveira/lab2tinr.git
-git push -u origin master
+git init  
+git add README.md  
+git commit -m "first commit"  
+git remote add origin https://github.com/ricardorodrigooliveira/lab2tinr.git  
+git push -u origin master  
