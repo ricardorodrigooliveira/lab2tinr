@@ -1,5 +1,7 @@
 # Teste CI
 
+## Aula 1
+
 ## Criação do diretório
 
 ### Inicie um terminal e digite
@@ -98,6 +100,70 @@ O travis já irá exibir os repositórios do git e basta ligar a chave para os r
 ### Notas gerais
 * build Scripts
     1. Linguagem de integração entre CI e o repositório (Como deve se comportar caso seja feito uma alteração no repositório)
+
+
+## Aula 2
+
+* Criação de uma conta no HEROKU https://heroku.com  
+
+Documentação referente a execução de node usando PAAS (Heroku)
+https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true
+
+1. Academicamente vamos utilizar uma maquina virtual com uma linha de comando no cmd  
+2. ssh -l ricardo cicd.fiapdev.com -p 80  
+Senha: fiap_1234  
+3. Clona o diretório git para a maquina  
+4. Conecta no heroku com o comando...  
+  heroku login -i (Informe usuário e senha)  
+5. Cria o app com o comando  
+  heroku create -a <nome do repositírio>  
+
+### 1º teste
+Fazer um push para o repositório, porém do Heroku...  
+git push heroku master
+
+O HEROCU vai instalar todas as dependencias de acordo com o que está declarado no packge.json
+
+A partir dai a aplicação já está no HEROKU e em settings já foi criada uma url para acesso. No caso do nosso teste...  
+https://lab2tinr-80438.herokuapp.com/  
+
+Com o comando abaixo é possivel ver a execução
+
+heroku logs --tail
+
+Para teste direto no terminal, instale as dependencias abaixo  
+```node
+npm install request express --save
+```
+
+### 2º teste
+Alterações
+
+nano package.json
+
+E edita o arquivo incluindo na tag script...  
+```json
+"start": "node index.js",
+```
+
+para sair...
+CTRL+O  
+ENTER
+CTRL+X
+
+Alteração no index.js  
+
+Alterar a linha onde está declarada a porta...  
+```node.js
+app.set('port', (process.env.PORT || 5000))
+```
+
+Fazemos novamente o push seguindo os comandos
+git add -A  
+git config --global user.email "seu email do git"
+git config --global user.name "seu nome do git"
+git push heroku master
+
 
 
 
