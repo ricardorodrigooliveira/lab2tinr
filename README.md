@@ -128,9 +128,9 @@ A partir dai a aplicação já está no HEROKU e em settings já foi criada uma 
 https://lab2tinr-80438.herokuapp.com/  
 
 Com o comando abaixo é possivel ver a execução
-
+```dos
 heroku logs --tail
-
+```
 Para teste direto no terminal, instale as dependencias abaixo  
 ```node
 npm install request express --save
@@ -138,18 +138,18 @@ npm install request express --save
 
 ### 2º teste
 Alterações
-
+```dos
 nano package.json
-
+```
 E edita o arquivo incluindo na tag script...  
 ```json
 "start": "node index.js",
 ```
 
-para sair...
+para sair...  
 CTRL+O  
-ENTER
-CTRL+X
+ENTER  
+CTRL+X  
 
 Alteração no index.js  
 
