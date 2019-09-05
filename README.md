@@ -5,7 +5,7 @@
 ## Criação do diretório
 
 ### Inicie um terminal e digite
-```node.js
+```dos
 mkdir lab2tinr
 ```
 ### Navegue para o novo diretório
@@ -73,7 +73,7 @@ describe('/', function () {
 
 ## Package.json
 Altere o package.json da seguinte forma;
-```node.js
+```json
 "scripts": {
     "test": "mocha --exit"
 ```
@@ -98,8 +98,8 @@ O travis já irá exibir os repositórios do git e basta ligar a chave para os r
 
 
 ### Notas gerais
-* build Scripts
-    1. Linguagem de integração entre CI e o repositório (Como deve se comportar caso seja feito uma alteração no repositório)
+* build Scripts  
+          Linguagem de integração entre CI e o repositório (Como deve se comportar caso seja feito uma alteração no repositório)
 
 
 ## Aula 2
@@ -147,9 +147,9 @@ E edita o arquivo incluindo na tag script...
 ```
 
 para sair...  
-CTRL+O  
+CTRL+O  (salvar)  
 ENTER  
-CTRL+X  
+CTRL+X  (fechar)  
 
 Alteração no index.js  
 
@@ -172,5 +172,5 @@ git push heroku master
 git init  
 git add README.md  
 git commit -m "first commit"  
-git remote add origin https://github.com/ricardorodrigooliveira/lab2tinr.git  
+git remote add origin https://github.com/ricardorodrigooliveira/lab2tinr-80438.git  
 git push -u origin master  
