@@ -164,6 +164,25 @@ git config --global user.email "seu email do git"
 git config --global user.name "seu nome do git"
 git push heroku master
 
+# Integração de teste com GitHub
+
+No dashboard do Heroku, na aba deploy, em Deployment method escolhemos GitHub
+
+Conect o repositório desejado e click em conectar
+
+Para automatizar o teste com Travis CI alterando arquivo .travis.yml da seguinte forma
+
+```yml
+language: node_js
+node_js:
+  - "10"
+deploy:
+  provider: heroku
+  api_key:
+  secure: 'KEY'
+  on: all_branches: true
+```
+
 
 
 
