@@ -183,7 +183,10 @@ deploy:
   on: all_branches: true
 ```
 
-
+Pegue a KEY no heroku e pelo terminal etre com o comando
+```cmd
+travis encrypt $(heroku auth:token) --add deploy.api_key
+```
 
 
 # github
